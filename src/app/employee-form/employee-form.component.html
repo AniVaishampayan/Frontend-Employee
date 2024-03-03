@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-md-6 bg-white text-left py-3 rounded shadow">
+      <form [formGroup]="employeeForm">
+        <div class="mb-3">
+          <label for="id" class="form-label">ID:-</label>
+          <input type="number" class="form-control" id="id" formControlName="id" [readOnly]="isIdDisabled" >
+        </div>
+        <div class="mb-3">
+            <label for="id" class="form-label">Employee ID:-</label>
+            <input type="text" class="form-control" id="empid" formControlName="empId" >
+          </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:-</label>
+          <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Surname:-</label>
+            <input type="text" class="form-control" id="surname" formControlName="surname">
+          </div>
+        <div class="mb-3">
+          <label for="age" class="form-label"> Age:</label>
+          <input type="number" class="form-control" id="age" formControlName="age">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label"> Email Id:</label>
+            <input type="text" class="form-control" id="emailId" formControlName="emailId">
+          </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">{{actionBtn}}</button>
+      </form>
+    </div>
+  </div>
